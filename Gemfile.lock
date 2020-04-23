@@ -217,7 +217,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  carrierwave
+  carrierwave (~> 2.0)
   coffee-rails (~> 4.2)
   devise
   erb2haml

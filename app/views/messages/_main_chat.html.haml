@@ -2,35 +2,25 @@
   .chat-main__header
     .chat-main__header__left
       %p.chat-main__header__left__current-group
-        test
+        = @group.name
       %ul.chat-main__header__left__member-lists
         %li.chat-main__header__left__member-lists__member
           Member :
         %li.chat-main__header__left__member-lists__member-name
-          masa
-    = link_to "#" do
+          - @group.users.each_with_index do |user, i|
+            - unless i.zero?
+              ,
+            = user.name
+    = link_to edit_group_path(@group.id) do
       .chat-main__header__left__edit-btn
         Edit
-  .chat-main__messages
-    .chat-main__messages__info
-      %p.chat-main__messages__info__name
-        masa
-      %p.chat-main__messages__info__date
-        2019/11/20(Wed) 17:45:01
-    %p.chat-main__messages__message
-      おはよう！
-    .chat-main__messages__info
-      %p.chat-main__messages__info__name
-        masa
-      %p.chat-main__messages__info__date
-        2019/11/20(Wed) 17:45:01
-    %p.chat-main__messages__message
-      おはよう！
-  .chat-main__form
-    .form
-      = text_field :content, '', class: 'form__message', placeholder: 'type a message'
-      .form__icon
-        = label :image, '', class: 'form__icon__image' do
-          = icon 'fas', 'image', class: 'icon'
-          = file_field :image, '', class: 'hidden'
-    = submit_tag '', value:'Send', class: 'form__submit', "data-disable-with": false
+  .messages
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      .input-box
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        = f.label :image, class: 'form__mico__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
