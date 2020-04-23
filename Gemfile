@@ -58,5 +58,5 @@ gem 'font-awesome-sass'
 gem 'devise'
 gem 'pry-rails'
 # Image Uploader
-gem 'carrierwave'
-gem "mini_magick"
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'

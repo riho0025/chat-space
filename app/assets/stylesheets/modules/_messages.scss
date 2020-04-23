@@ -48,12 +48,12 @@
       color: #ffffff;
       .group{
         padding-top:20px; 
-        p.group__group-name{
-          font-size: 15px;
-        }
-        p.group__group-latest-massages{
-          font-size: 11px;
-        }
+          &__name{
+            font-size: 15px;
+          }
+          .group__message{
+            font-size: 11px;
+          }
       }
     }
   }
@@ -97,64 +97,72 @@
       }
     }
   }
-  .chat-main__messages {
-  height: calc(100vh - 190px);
-  background-color: #fafafa;
-  padding: 35px 40px 0;
-  &__info{
-    display:flex; 
-    margin-bottom: 12px;
-    &__name{
-      color: #333333;
-      font-size: 16px;
-      font-weight: bold;
-      margin-right: 10px;
+  .messages {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 35px 40px 0;
+    overflow: scroll;
+      &__info{
+        display:flex; 
+        margin-bottom: 12px;
+      &__name{
+        color: #333333;
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 10px;
       }
-    &__date{
-      color: #999999;
-      font-size: 12px;
+      &__date{
+        color: #999999;
+        font-size: 12px;
       }
     }
-  &__message{
-  padding-bottom: 46px;
+    &__message{
+      padding-bottom: 46px;
     }
   }
-  .chat-main__form {
-    width: 100%;
+
+  .form {
     height: 90px;
     background-color: #d2d2d2;  
-    position: absolute;
-    bottom: 0;
     padding:20px 40px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-      .form{
-        display: flex;
+    .new_message{
+      display: flex;
+      .input-box{
+        position: relative;
         width: 100%;
-        &__message{
-          width: calc(100% - 15px);
+        .form__message{
           height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: #434a54;
+          border-style: none;
         }
-      &__icon{
-          position: relative;
-        &__image{
+        .form__mico__image{
+          font-size: 1.3rem;
           position: absolute;
           top: 10px;
           right: 10px;
-          font-size: 1.3rem;
           cursor: pointer;
+          fas{
+            display: inline-block;
+            font:normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
           }
-        .hidden {
-          display: none;
+          .hidden{
+            display: none;
+          }
+        }
       }
-    }
-  }
       .form__submit{
         background-color: #38aef0;
         color: white;
         width: 100px;
         height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        cursor: pointer;
+      }
     }
   }
 }
