@@ -102,22 +102,22 @@
     background-color: #fafafa;
     padding: 35px 40px 0;
     overflow: scroll;
-      &__info{
-        display:flex; 
-        margin-bottom: 12px;
-      &__name{
-        color: #333333;
-        font-size: 16px;
-        font-weight: bold;
-        margin-right: 10px;
-      }
-      &__date{
-        color: #999999;
-        font-size: 12px;
-      }
-    }
-    &__message{
+    .chat-main__messages{
       padding-bottom: 46px;
+        &__info{
+          display:flex; 
+          margin-bottom: 12px;
+        &__name{
+          color: #333333;
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+        &__date{
+          color: #999999;
+        font-size: 12px;
+        }
+      }
     }
   }
 
