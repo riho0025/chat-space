@@ -2,7 +2,7 @@
 lock "~> 3.13.0"
 
 set :application, "chat-space"
-set :repo_url, "git@example.com:riho0025/chat-space"
+set :repo_url, "git@github.com:riho0025/chat-space"
 
 # バージョンが変わっても共通で参照するディレクトリを指定
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
