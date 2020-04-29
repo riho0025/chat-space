@@ -1,7 +1,5 @@
 $(function () {
 
-  var user_list = $("#user-search-result");
-
   function addUser(user) {
     var html =
       `<div class="chat-group-user clearfix">
@@ -33,10 +31,11 @@ $(function () {
 
   $("#user-search-field").on("keyup", function () {
     var input = $("#user-search-field").val();
+    var group_id = $('.chat__group_id').val(); 
     $.ajax({
       type: "GET",
       url: "/users",
-      data: { keyword: input },
+      data: { keyword: input, groupId: group_id },
       dataType: "json"
     })
       .done(function (users) {
