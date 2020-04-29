@@ -3,13 +3,14 @@ $(function () {
     if (message.image) {
       var html =
         `<div class="chat-main__messages" data-message-id=${message.id}>
-          <div class="chat-main__messages__info"></div>
-          <p class="chat-main__messages__info__name">
-            ${message.user_name}
-          </p>
-          <p class="chat-main__messages__info__date">
-            ${message.created_at}
-          </p>
+          <div class="chat-main__messages__info">
+            <p class="chat-main__messages__info__name">
+              ${message.user_name}
+            </p>
+            <p class="chat-main__messages__info__date">
+              ${message.created_at}
+            </p>
+          </div>
           <p class="chat-main__messages__message">
             ${message.content}
           </p>
@@ -19,13 +20,14 @@ $(function () {
     } else {
       var html =
         `<div class="chat-main__messages" data-message-id=${message.id}>
-          <div class="chat-main__messages__info"></div>
-          <p class="chat-main__messages__info__name">
-            ${message.user_name}
-          </p>
-          <p class="chat-main__messages__info__date">
-            ${message.created_at}
-          </p>
+          <div class="chat-main__messages__info">
+            <p class="chat-main__messages__info__name">
+              ${message.user_name}
+            </p>
+            <p class="chat-main__messages__info__date">
+              ${message.created_at}
+            </p>
+          </div>
           <p class="chat-main__messages__message">
             ${message.content}
           </p>
