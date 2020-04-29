@@ -11,10 +11,10 @@ $(function () {
               ${message.created_at}
             </p>
           </div>
-          <p class="chat-main__messages__message">
+          <p class="lower-message__content">
             ${message.content}
           </p>
-          <img src=${message.image} >
+          <img src=${message.image}>
         </div>`
       return html;
     } else {
