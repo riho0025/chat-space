@@ -2,7 +2,7 @@
 Ruby on Railsを使用したWebサービスです。
 TECH::CAMP受講中に作成いたしました。
 
-(https://user-images.githubusercontent.com/63936582/83637795-211e1400-a5e3-11ea-82e5-c295e3cfc671.png)
+<img width="1440" alt="スクリーンショット 2020-05-12 11 57 33" src="https://user-images.githubusercontent.com/63936582/83638609-5ecf6c80-a5e4-11ea-9018-4a019e6ebae4.png">
 
 ## Description
 ログイン機能、グループ機能付きのチャットアプリです。
